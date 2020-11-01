@@ -1,15 +1,9 @@
 {
   "name": "mern-boilerplate",
-  "version": "1.0.0",
-  "description": "MERN Boilerplate code",
-  "main": "template.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sidinsomniac/mern-boilerplate.git"
-  },
+  "version": "2.0.0",
+  "description": "Boilerplate MERN code",
+  "author": "Siddhartha Chatterjee",
+  "license": "MIT",
   "keywords": [
     "react",
     "node",
@@ -17,30 +11,39 @@
     "mongodb",
     "mern"
   ],
-  "author": "Siddhartha Chatterjee",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/sidinsomniac/mern-boilerplate/issues"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sidinsomniac/mern-boilerplate.git"
   },
-  "homepage": "https://github.com/sidinsomniac/mern-boilerplate#readme",
+  "homepage": "https://github.com/sidinsomniac/mern-boilerplate.git",
+  "main": "template.js",
+  "scripts": {
+    "development": "nodemon",
+    "build": "webpack --config webpack.config.client.production.js && webpack --mode=production --config webpack.config.server.js",
+    "start": "NODE_ENV=production node ./dist/server.generated.js"
+  },
+  "engines": {
+    "node": "13.12.0",
+    "npm": "6.14.4"
+  },
   "dependencies": {
-    "express": "^4.17.1",
-    "mongoose": "^5.10.11",
-    "react": "^17.0.0",
-    "react-dom": "^17.0.0",
-    "@hot-loader/react-dom": "^17.0.0"
+    "@hot-loader/react-dom": "16.13.0",
+    "express": "4.17.1",
+    "mongodb": "3.5.5",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-hot-loader": "4.12.20"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.3",
-    "@babel/preset-env": "^7.12.1",
-    "@babel/preset-react": "^7.12.1",
-    "babel-loader": "^8.1.0",
-    "nodemon": "^2.0.6",
-    "react-hot-loader": "^4.13.0",
-    "webpack": "^5.3.2",
-    "webpack-cli": "^4.1.0",
-    "webpack-dev-middleware": "^4.0.0",
-    "webpack-hot-middleware": "^2.25.0",
-    "webpack-node-externals": "^2.5.2"
+    "@babel/core": "7.9.0",
+    "@babel/preset-env": "7.9.0",
+    "@babel/preset-react": "7.9.4",
+    "babel-loader": "8.1.0",
+    "nodemon": "2.0.2",
+    "webpack": "4.42.1",
+    "webpack-cli": "3.3.11",
+    "webpack-dev-middleware": "3.7.2",
+    "webpack-hot-middleware": "2.25.0",
+    "webpack-node-externals": "1.7.2"
   }
 }

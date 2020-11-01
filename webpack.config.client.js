@@ -20,7 +20,9 @@ const config = {
             {
                 test: /\.jsx?$/,
                 exclude: /node_modules/,
-                use: ['babel-loader']
+                use: [
+                    'babel-loader'
+                ]
             }
         ]
     },
@@ -34,4 +36,5 @@ const config = {
         }
     }
 };
+
 module.exports = config;
